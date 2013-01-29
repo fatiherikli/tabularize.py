@@ -51,7 +51,7 @@ So that might be funny too
     for name, surname in tabular:
         print name, surname # disco
 
-And also you can parse the doctstring of object with `from_docstring`
+And also you can parse the doctstring of any object with `from_docstring`
 
     class MyClass(object):
         """
