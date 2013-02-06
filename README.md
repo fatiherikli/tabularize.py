@@ -15,7 +15,7 @@ You can parse a string with `loads` method.
     | name | surname |
     ------------------
     | edi  | budu    |
-    | budu | edu     |
+    | budu | edi     |
     ------------------
     """)
 
@@ -31,7 +31,7 @@ Also you can specify the return type of result.
     | name | surname |
     ------------------
     | edi  | budu    |
-    | budu | edu     |
+    | budu | edi     |
     ------------------
     """, return_type=list)
 
@@ -44,7 +44,7 @@ So that might be funny too
     | name | surname |
     ------------------
     | edi  | budu    |
-    | budu | edu     |
+    | budu | edi     |
     ------------------
     """, return_type=tuple)
 
@@ -55,15 +55,12 @@ And also you can parse the doctstring of any object with `from_docstring`
 
     class MyClass(object):
         """
-        This is a docstring
-
-        Here is my test case:
-
-            _____________________________
-            | name | surname | full_name |
-            | edi  | budu    | edi budu  |
-            | budu | edi     | budu edi  |
-            ______________________________
+        Here is my test case
+        _____________________________
+        | name | surname | full_name |
+        | edi  | budu    | edi budu  |
+        | budu | edi     | budu edi  |
+        ______________________________
 
         """
 
