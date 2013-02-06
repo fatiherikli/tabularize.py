@@ -23,8 +23,7 @@ You can parse a string with `loads` method.
               { "name": "budu", "surname": "edi"}]
 
 
-Also you can specify the return type of result.
-
+Also you can specify the return type of result:
 
     print tabularize.loads("""
     ------------------
@@ -36,20 +35,6 @@ Also you can specify the return type of result.
     """, return_type=list)
 
     # prints [["edi", "budu"], ["budu", "edi"]]
-
-So that might be funny too
-
-    tabular = tabularize.loads("""
-    ------------------
-    | name | surname |
-    ------------------
-    | edi  | budu    |
-    | budu | edi     |
-    ------------------
-    """, return_type=tuple)
-
-    for name, surname in tabular:
-        print name, surname # disco
 
 And also you can parse the doctstring of any object with `from_docstring`
 

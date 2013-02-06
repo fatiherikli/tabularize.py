@@ -54,21 +54,6 @@ class TabularizeTestCase(unittest.TestCase):
         """),  [{ "name": "edi", "surname": "budu"},
                 { "name": "budu", "surname": "edi"}])
 
-
-    def test_comments(self):
-        self.assertEqual(tabularize.loads("""
-
-        Here is the our customer table:
-
-        | name  | surname  |
-        | edi   | budu     |
-        | budu  | edi      |
-
-        Thanks
-
-        """),  [{ "name": "edi", "surname": "budu"},
-                { "name": "budu", "surname": "edi"}])
-
     def test_different_types(self):
         self.assertEqual(tabularize.loads("""
         __________________
@@ -93,11 +78,12 @@ class TabularizeTestCase(unittest.TestCase):
 
             Here is my test case:
 
-                _____________________________
-                | name | surname | full_name |
-                | edi  | budu    | edi budu  |
-                | budu | edi     | budu edi  |
-                ______________________________
+            ------------------------------
+            | name | surname | full_name |
+            ------------------------------
+            | edi  | budu    | edi budu  |
+            | budu | edi     | budu edi  |
+            ------------------------------
 
             """
 
